@@ -44,7 +44,7 @@ using namespace ::dsmr_eso::fields;
 #define DSMR_DATA_SENSOR(s) s
 #define DSMR_COMMA ,
 
-using MyData = ::dsmr_eso::ParsedData<DSMR_TEXT_SENSOR_LIST(DSMR_DATA_SENSOR, DSMR_COMMA)
+using MyData = ::dsmr::ParsedData<DSMR_TEXT_SENSOR_LIST(DSMR_DATA_SENSOR, DSMR_COMMA)
                                       DSMR_BOTH DSMR_SENSOR_LIST(DSMR_DATA_SENSOR, DSMR_COMMA)>;
 
 class Dsmr_eso : public Component, public uart::UARTDevice {

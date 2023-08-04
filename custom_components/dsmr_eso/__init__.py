@@ -25,8 +25,8 @@ CONF_REQUEST_INTERVAL = "request_interval"
 CONF_REQUEST_PIN = "request_pin"
 
 # Hack to prevent compile error due to ambiguity with lib namespace
-dsmr_ns = cg.esphome_ns.namespace("esphome::dsmr")
-Dsmr = dsmr_ns.class_("Dsmr", cg.Component, uart.UARTDevice)
+dsmr_ns = cg.esphome_ns.namespace("esphome::dsmr_eso")
+Dsmr_eso = dsmr_ns.class_("Dsmr_eso", cg.Component, uart.UARTDevice)
 
 
 def _validate_key(value):
@@ -50,7 +50,7 @@ def _validate_key(value):
 CONFIG_SCHEMA = cv.All(
     cv.Schema(
         {
-            cv.GenerateID(): cv.declare_id(Dsmr),
+            cv.GenerateID(): cv.declare_id(Dsmr_eso),
             cv.Optional(CONF_DECRYPTION_KEY): _validate_key,
             cv.Optional(CONF_CRC_CHECK, default=True): cv.boolean,
             cv.Optional(CONF_GAS_MBUS_ID, default=1): cv.int_,
@@ -87,7 +87,7 @@ async def to_code(config):
     cg.add_build_flag("-DDSMR_WATER_MBUS_ID=" + str(config[CONF_WATER_MBUS_ID]))
 
     # DSMR Parser
-    cg.add_library("glmnet/Dsmr", "0.8")
+    cg.add_library("geduxas/Dsmr", "0.8")
 
     # Crypto
     cg.add_library("rweather/Crypto", "0.4.0")

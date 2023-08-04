@@ -1,6 +1,6 @@
 #ifdef USE_ARDUINO
 
-#include "dsmr.h"
+#include "dsmr_eso.h"
 #include "esphome/core/log.h"
 
 #include <AES.h>
@@ -8,18 +8,18 @@
 #include <GCM.h>
 
 namespace esphome {
-namespace dsmr {
+namespace dsmr_eso {
 
-static const char *const TAG = "dsmr";
+static const char *const TAG = "dsmr_eso";
 
-void Dsmr::setup() {
+void Dsmr_eso::setup() {
   this->telegram_ = new char[this->max_telegram_len_];  // NOLINT
   if (this->request_pin_ != nullptr) {
     this->request_pin_->setup();
   }
 }
 
-void Dsmr::loop() {
+void Dsmr_eso::loop() {
   if (this->ready_to_request_data_()) {
     if (this->decryption_key_.empty()) {
       this->receive_telegram_();
@@ -29,7 +29,7 @@ void Dsmr::loop() {
   }
 }
 
-bool Dsmr::ready_to_request_data_() {
+bool Dsmr_eso::ready_to_request_data_() {
   // When using a request pin, then wait for the next request interval.
   if (this->request_pin_ != nullptr) {
     if (!this->requesting_data_ && this->request_interval_reached_()) {
@@ -50,16 +50,16 @@ bool Dsmr::ready_to_request_data_() {
   return this->requesting_data_;
 }
 
-bool Dsmr::request_interval_reached_() {
+bool Dsmr_eso::request_interval_reached_() {
   if (this->last_request_time_ == 0) {
     return true;
   }
   return millis() - this->last_request_time_ > this->request_interval_;
 }
 
-bool Dsmr::receive_timeout_reached_() { return millis() - this->last_read_time_ > this->receive_timeout_; }
+bool Dsmr_eso::receive_timeout_reached_() { return millis() - this->last_read_time_ > this->receive_timeout_; }
 
-bool Dsmr::available_within_timeout_() {
+bool Dsmr_eso::available_within_timeout_() {
   // Data are available for reading on the UART bus?
   // Then we can start reading right away.
   if (this->available()) {
@@ -96,7 +96,7 @@ bool Dsmr::available_within_timeout_() {
   return false;
 }
 
-void Dsmr::start_requesting_data_() {
+void Dsmr_eso::start_requesting_data_() {
   if (!this->requesting_data_) {
     if (this->request_pin_ != nullptr) {
       ESP_LOGV(TAG, "Start requesting data from P1 port");
@@ -109,7 +109,7 @@ void Dsmr::start_requesting_data_() {
   }
 }
 
-void Dsmr::stop_requesting_data_() {
+void Dsmr_eso::stop_requesting_data_() {
   if (this->requesting_data_) {
     if (this->request_pin_ != nullptr) {
       ESP_LOGV(TAG, "Stop requesting data from P1 port");
@@ -124,7 +124,7 @@ void Dsmr::stop_requesting_data_() {
   }
 }
 
-void Dsmr::reset_telegram_() {
+void Dsmr_eso::reset_telegram_() {
   this->header_found_ = false;
   this->footer_found_ = false;
   this->bytes_read_ = 0;
@@ -133,7 +133,7 @@ void Dsmr::reset_telegram_() {
   this->last_read_time_ = 0;
 }
 
-void Dsmr::receive_telegram_() {
+void Dsmr_eso::receive_telegram_() {
   while (this->available_within_timeout_()) {
     const char c = this->read();
 
@@ -187,7 +187,7 @@ void Dsmr::receive_telegram_() {
   }
 }
 
-void Dsmr::receive_encrypted_telegram_() {
+void Dsmr_eso::receive_encrypted_telegram_() {
   while (this->available_within_timeout_()) {
     const char c = this->read();
 
@@ -252,7 +252,7 @@ void Dsmr::receive_encrypted_telegram_() {
   }
 }
 
-bool Dsmr::parse_telegram() {
+bool Dsmr_eso::parse_telegram() {
   MyData data;
   ESP_LOGV(TAG, "Trying to parse telegram");
   this->stop_requesting_data_();
@@ -271,8 +271,8 @@ bool Dsmr::parse_telegram() {
   }
 }
 
-void Dsmr::dump_config() {
-  ESP_LOGCONFIG(TAG, "DSMR:");
+void Dsmr_eso::dump_config() {
+  ESP_LOGCONFIG(TAG, "DSMR_eso:");
   ESP_LOGCONFIG(TAG, "  Max telegram length: %d", this->max_telegram_len_);
   ESP_LOGCONFIG(TAG, "  Receive timeout: %.1fs", this->receive_timeout_ / 1e3f);
   if (this->request_pin_ != nullptr) {
@@ -289,7 +289,7 @@ void Dsmr::dump_config() {
   DSMR_TEXT_SENSOR_LIST(DSMR_LOG_TEXT_SENSOR, )
 }
 
-void Dsmr::set_decryption_key(const std::string &decryption_key) {
+void Dsmr_eso::set_decryption_key(const std::string &decryption_key) {
   if (decryption_key.length() == 0) {
     ESP_LOGI(TAG, "Disabling decryption");
     this->decryption_key_.clear();
@@ -321,7 +321,7 @@ void Dsmr::set_decryption_key(const std::string &decryption_key) {
   }
 }
 
-}  // namespace dsmr
+}  // namespace dsmr_eso
 }  // namespace esphome
 
 #endif  // USE_ARDUINO
