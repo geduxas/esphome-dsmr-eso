@@ -1,14 +1,12 @@
----
+
 substitutions:
   device_name: slimmelezer
   friendly_name: DSMR Reader
 
 external_components:
-- source:
-    type: git
-    url: github://geduxas/esphome-dsmr-eso
-    ref: main
-  refresh: 0s
+  - source: github://geduxas/esphome-dsmr-eso@main
+    components: [ dsmr-eso ]
+    refresh: 0s
 
 esphome:
   name: ${device_name}
