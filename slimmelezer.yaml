@@ -17,8 +17,8 @@ esphome:
   board: d1_mini
   name_add_mac_suffix: false
   project:
-    name: zuidwijk.slimmelezer
-    version: "2.1"
+    name: geduxas.esodsmr
+    version: "2.0"
   on_boot:
     then:
       - if:
