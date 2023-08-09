@@ -1,6 +1,6 @@
 Tai ESPHome praplėtimas tinkantis nuskaityti ESO skaitiklius.
-Modifikuotas (SlimmeLezer)[https://github.com/zuidwijk/dsmr]
-ir (ESPHome DSRM)[https://github.com/esphome/esphome] priedas. 
+Modifikuotas [SlimmeLezer](https://github.com/zuidwijk/dsmr)
+ir [ESPHome DSRM](https://github.com/esphome/esphome) priedas. 
 Vietoj ESPHome dsmr komponento naudoti dsmr_eso.
 
 
