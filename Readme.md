@@ -5,7 +5,7 @@ Vietoj ESPHome dsmr komponento naudoti dsmr_eso.
 
 
 
-Naujam projektui reikia nurodit
+Naujam projektui reikia nurodyt
 
 ```
 substitutions:
