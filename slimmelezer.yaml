@@ -5,7 +5,6 @@ substitutions:
 
 external_components:
   - source: github://geduxas/esphome-dsmr-eso@main
-    components: [ dsmr_eso ]
     refresh: 0s
 
 esphome:
