@@ -18,6 +18,7 @@ from esphome.const import (
     UNIT_KILOVOLT_AMPS_REACTIVE_HOURS,
     UNIT_KILOVOLT_AMPS_REACTIVE,
     UNIT_VOLT,
+    UNIT_VOLT_AMPS,
 )
 from . import Dsmr_eso, CONF_DSMR_ID
 
@@ -88,19 +89,19 @@ CONFIG_SCHEMA = cv.Schema(
             unit_of_measurement=UNIT_KILOVOLT_AMPS_REACTIVE_HOURS,
             accuracy_decimals=3,
         ),
-        cv.Optional("q_energy_delivered_tariff1"): sensor.sensor_schema(
+        cv.Optional("reactive_energy_delivered_tariff1"): sensor.sensor_schema(
             unit_of_measurement=UNIT_KILOVOLT_AMPS_REACTIVE_HOURS,
             accuracy_decimals=3,
         ),
-        cv.Optional("q_energy_delivered_tariff2"): sensor.sensor_schema(
+        cv.Optional("reactive_energy_delivered_tariff2"): sensor.sensor_schema(
             unit_of_measurement=UNIT_KILOVOLT_AMPS_REACTIVE_HOURS,
             accuracy_decimals=3,
         ),
-        cv.Optional("q_energy_delivered_tariff3"): sensor.sensor_schema(
+        cv.Optional("reactive_energy_delivered_tariff3"): sensor.sensor_schema(
             unit_of_measurement=UNIT_KILOVOLT_AMPS_REACTIVE_HOURS,
             accuracy_decimals=3,
         ),
-        cv.Optional("q_energy_delivered_tariff4"): sensor.sensor_schema(
+        cv.Optional("reactive_energy_delivered_tariff4"): sensor.sensor_schema(
             unit_of_measurement=UNIT_KILOVOLT_AMPS_REACTIVE_HOURS,
             accuracy_decimals=3,
         ),
@@ -108,19 +109,19 @@ CONFIG_SCHEMA = cv.Schema(
             unit_of_measurement=UNIT_KILOVOLT_AMPS_REACTIVE_HOURS,
             accuracy_decimals=3,
         ),
-        cv.Optional("q_energy_returned_tariff1"): sensor.sensor_schema(
+        cv.Optional("reactive_energy_returned_tariff1"): sensor.sensor_schema(
             unit_of_measurement=UNIT_KILOVOLT_AMPS_REACTIVE_HOURS,
             accuracy_decimals=3,
         ),
-        cv.Optional("q_energy_returned_tariff2"): sensor.sensor_schema(
+        cv.Optional("reactive_energy_returned_tariff2"): sensor.sensor_schema(
             unit_of_measurement=UNIT_KILOVOLT_AMPS_REACTIVE_HOURS,
             accuracy_decimals=3,
         ),
-        cv.Optional("q_energy_returned_tariff3"): sensor.sensor_schema(
+        cv.Optional("reactive_energy_returned_tariff3"): sensor.sensor_schema(
             unit_of_measurement=UNIT_KILOVOLT_AMPS_REACTIVE_HOURS,
             accuracy_decimals=3,
         ),
-        cv.Optional("q_energy_returned_tariff4"): sensor.sensor_schema(
+        cv.Optional("reactive_energy_returned_tariff4"): sensor.sensor_schema(
             unit_of_measurement=UNIT_KILOVOLT_AMPS_REACTIVE_HOURS,
             accuracy_decimals=3,
         ),
@@ -141,7 +142,37 @@ CONFIG_SCHEMA = cv.Schema(
             accuracy_decimals=3,
             state_class=STATE_CLASS_MEASUREMENT,
         ),
+        cv.Optional("reactive_power_delivered_l1"): sensor.sensor_schema(
+            unit_of_measurement=UNIT_KILOVOLT_AMPS_REACTIVE,
+            accuracy_decimals=3,
+            state_class=STATE_CLASS_MEASUREMENT,
+        ),
+        cv.Optional("reactive_power_delivered_l2"): sensor.sensor_schema(
+            unit_of_measurement=UNIT_KILOVOLT_AMPS_REACTIVE,
+            accuracy_decimals=3,
+            state_class=STATE_CLASS_MEASUREMENT,
+        ),
+        cv.Optional("reactive_power_delivered_l3"): sensor.sensor_schema(
+            unit_of_measurement=UNIT_KILOVOLT_AMPS_REACTIVE,
+            accuracy_decimals=3,
+            state_class=STATE_CLASS_MEASUREMENT,
+        ),
         cv.Optional("reactive_power_returned"): sensor.sensor_schema(
+            unit_of_measurement=UNIT_KILOVOLT_AMPS_REACTIVE,
+            accuracy_decimals=3,
+            state_class=STATE_CLASS_MEASUREMENT,
+        ),
+        cv.Optional("reactive_power_returned_l1"): sensor.sensor_schema(
+            unit_of_measurement=UNIT_KILOVOLT_AMPS_REACTIVE,
+            accuracy_decimals=3,
+            state_class=STATE_CLASS_MEASUREMENT,
+        ),
+        cv.Optional("reactive_power_returned_l2"): sensor.sensor_schema(
+            unit_of_measurement=UNIT_KILOVOLT_AMPS_REACTIVE,
+            accuracy_decimals=3,
+            state_class=STATE_CLASS_MEASUREMENT,
+        ),
+        cv.Optional("reactive_power_returned_l3"): sensor.sensor_schema(
             unit_of_measurement=UNIT_KILOVOLT_AMPS_REACTIVE,
             accuracy_decimals=3,
             state_class=STATE_CLASS_MEASUREMENT,
@@ -218,13 +249,49 @@ CONFIG_SCHEMA = cv.Schema(
             device_class=DEVICE_CLASS_CURRENT,
             state_class=STATE_CLASS_MEASUREMENT,
         ),
+        cv.Optional("current_fuse_l1"): sensor.sensor_schema(
+            unit_of_measurement=UNIT_AMPERE,
+            accuracy_decimals=1,
+            device_class=DEVICE_CLASS_CURRENT,
+            state_class=STATE_CLASS_MEASUREMENT,
+        ),
         cv.Optional("current_l2"): sensor.sensor_schema(
             unit_of_measurement=UNIT_AMPERE,
             accuracy_decimals=1,
             device_class=DEVICE_CLASS_CURRENT,
             state_class=STATE_CLASS_MEASUREMENT,
         ),
+        cv.Optional("current_fuse_l2"): sensor.sensor_schema(
+            unit_of_measurement=UNIT_AMPERE,
+            accuracy_decimals=1,
+            device_class=DEVICE_CLASS_CURRENT,
+            state_class=STATE_CLASS_MEASUREMENT,
+        ),
         cv.Optional("current_l3"): sensor.sensor_schema(
+            unit_of_measurement=UNIT_AMPERE,
+            accuracy_decimals=1,
+            device_class=DEVICE_CLASS_CURRENT,
+            state_class=STATE_CLASS_MEASUREMENT,
+        ),
+        cv.Optional("current_fuse_l3"): sensor.sensor_schema(
+            unit_of_measurement=UNIT_AMPERE,
+            accuracy_decimals=1,
+            device_class=DEVICE_CLASS_CURRENT,
+            state_class=STATE_CLASS_MEASUREMENT,
+        ),
+        cv.Optional("current"): sensor.sensor_schema(
+            unit_of_measurement=UNIT_AMPERE,
+            accuracy_decimals=1,
+            device_class=DEVICE_CLASS_CURRENT,
+            state_class=STATE_CLASS_MEASUREMENT,
+        ),
+        cv.Optional("current_n"): sensor.sensor_schema(
+            unit_of_measurement=UNIT_AMPERE,
+            accuracy_decimals=1,
+            device_class=DEVICE_CLASS_CURRENT,
+            state_class=STATE_CLASS_MEASUREMENT,
+        ),
+        cv.Optional("current_sum"): sensor.sensor_schema(
             unit_of_measurement=UNIT_AMPERE,
             accuracy_decimals=1,
             device_class=DEVICE_CLASS_CURRENT,
@@ -266,6 +333,72 @@ CONFIG_SCHEMA = cv.Schema(
             device_class=DEVICE_CLASS_POWER,
             state_class=STATE_CLASS_MEASUREMENT,
         ),
+        cv.Optional("apparent_delivery_power"): sensor.sensor_schema(
+            unit_of_measurement=UNIT_VOLT_AMPS,
+            accuracy_decimals=3,
+            device_class=DEVICE_CLASS_POWER,
+            state_class=STATE_CLASS_MEASUREMENT,
+        ),
+        cv.Optional("apparent_delivery_power_l1"): sensor.sensor_schema(
+            unit_of_measurement=UNIT_VOLT_AMPS,
+            accuracy_decimals=3,
+            device_class=DEVICE_CLASS_POWER,
+            state_class=STATE_CLASS_MEASUREMENT,
+        ),
+        cv.Optional("apparent_delivery_power_l2"): sensor.sensor_schema(
+            unit_of_measurement=UNIT_VOLT_AMPS,
+            accuracy_decimals=3,
+            device_class=DEVICE_CLASS_POWER,
+            state_class=STATE_CLASS_MEASUREMENT,
+        ),
+        cv.Optional("apparent_delivery_power_l3"): sensor.sensor_schema(
+            unit_of_measurement=UNIT_VOLT_AMPS,
+            accuracy_decimals=3,
+            device_class=DEVICE_CLASS_POWER,
+            state_class=STATE_CLASS_MEASUREMENT,
+        ),
+        cv.Optional("apparent_return_power"): sensor.sensor_schema(
+            unit_of_measurement=UNIT_VOLT_AMPS,
+            accuracy_decimals=3,
+            device_class=DEVICE_CLASS_POWER,
+            state_class=STATE_CLASS_MEASUREMENT,
+        ),
+        cv.Optional("apparent_return_power_l1"): sensor.sensor_schema(
+            unit_of_measurement=UNIT_VOLT_AMPS,
+            accuracy_decimals=3,
+            device_class=DEVICE_CLASS_POWER,
+            state_class=STATE_CLASS_MEASUREMENT,
+        ),
+        cv.Optional("apparent_return_power_l2"): sensor.sensor_schema(
+            unit_of_measurement=UNIT_VOLT_AMPS,
+            accuracy_decimals=3,
+            device_class=DEVICE_CLASS_POWER,
+            state_class=STATE_CLASS_MEASUREMENT,
+        ),
+        cv.Optional("apparent_return_power_l3"): sensor.sensor_schema(
+            unit_of_measurement=UNIT_VOLT_AMPS,
+            accuracy_decimals=3,
+            device_class=DEVICE_CLASS_POWER,
+            state_class=STATE_CLASS_MEASUREMENT,
+        ),
+        cv.Optional("active_demand_power"): sensor.sensor_schema(
+            unit_of_measurement=UNIT_KILOWATT,
+            accuracy_decimals=3,
+            device_class=DEVICE_CLASS_POWER,
+            state_class=STATE_CLASS_MEASUREMENT,
+        ),
+        cv.Optional("active_demand_net"): sensor.sensor_schema(
+            unit_of_measurement=UNIT_KILOWATT,
+            accuracy_decimals=3,
+            device_class=DEVICE_CLASS_POWER,
+            state_class=STATE_CLASS_MEASUREMENT,
+        ),
+        cv.Optional("active_demand_abs"): sensor.sensor_schema(
+            unit_of_measurement=UNIT_KILOWATT,
+            accuracy_decimals=3,
+            device_class=DEVICE_CLASS_POWER,
+            state_class=STATE_CLASS_MEASUREMENT,
+        ),
         cv.Optional("reactive_power_delivered_l1"): sensor.sensor_schema(
             unit_of_measurement=UNIT_KILOVOLT_AMPS_REACTIVE,
             accuracy_decimals=3,
@@ -296,7 +429,19 @@ CONFIG_SCHEMA = cv.Schema(
             accuracy_decimals=3,
             state_class=STATE_CLASS_MEASUREMENT,
         ),
+        cv.Optional("voltage"): sensor.sensor_schema(
+            unit_of_measurement=UNIT_VOLT,
+            accuracy_decimals=1,
+            device_class=DEVICE_CLASS_VOLTAGE,
+            state_class=STATE_CLASS_MEASUREMENT,
+        ),
         cv.Optional("voltage_l1"): sensor.sensor_schema(
+            unit_of_measurement=UNIT_VOLT,
+            accuracy_decimals=1,
+            device_class=DEVICE_CLASS_VOLTAGE,
+            state_class=STATE_CLASS_MEASUREMENT,
+        ),
+        cv.Optional("voltage_avg_l1"): sensor.sensor_schema(
             unit_of_measurement=UNIT_VOLT,
             accuracy_decimals=1,
             device_class=DEVICE_CLASS_VOLTAGE,
@@ -308,7 +453,19 @@ CONFIG_SCHEMA = cv.Schema(
             device_class=DEVICE_CLASS_VOLTAGE,
             state_class=STATE_CLASS_MEASUREMENT,
         ),
+        cv.Optional("voltage_avg_l2"): sensor.sensor_schema(
+            unit_of_measurement=UNIT_VOLT,
+            accuracy_decimals=1,
+            device_class=DEVICE_CLASS_VOLTAGE,
+            state_class=STATE_CLASS_MEASUREMENT,
+        ),
         cv.Optional("voltage_l3"): sensor.sensor_schema(
+            unit_of_measurement=UNIT_VOLT,
+            accuracy_decimals=1,
+            device_class=DEVICE_CLASS_VOLTAGE,
+            state_class=STATE_CLASS_MEASUREMENT,
+        ),
+        cv.Optional("voltage_avg_l3"): sensor.sensor_schema(
             unit_of_measurement=UNIT_VOLT,
             accuracy_decimals=1,
             device_class=DEVICE_CLASS_VOLTAGE,
@@ -334,6 +491,14 @@ CONFIG_SCHEMA = cv.Schema(
         ),
         cv.Optional(
             "active_energy_import_current_average_demand"
+        ): sensor.sensor_schema(
+            unit_of_measurement=UNIT_KILOWATT,
+            accuracy_decimals=3,
+            device_class=DEVICE_CLASS_POWER,
+            state_class=STATE_CLASS_MEASUREMENT,
+        ),
+        cv.Optional(
+            "active_energy_export_current_average_demand"
         ): sensor.sensor_schema(
             unit_of_measurement=UNIT_KILOWATT,
             accuracy_decimals=3,
