@@ -237,20 +237,36 @@ sensor:
       name: ${friendly_name} Power Returned L3
     apparent_delivery_power:
       name: ${friendly_name} Apparent Power Deliverd
+      filters:
+        multiply: 1000
     apparent_delivery_power_l1:
       name: ${friendly_name} Apparent Power Deliverd L1
+      filters:
+        multiply: 1000
     apparent_delivery_power_l2:
       name: ${friendly_name} Apparent Power Deliverd L2
+      filters:
+        multiply: 1000
     apparent_delivery_power_l3:
       name: ${friendly_name} Apparent Power Deliverd L3
+      filters:
+        multiply: 1000
     apparent_return_power:
       name: ${friendly_name} Apparent Power Returned 
+      filters:
+        multiply: 1000
     apparent_return_power_l1:
       name: ${friendly_name} Apparent Power Returned L1
+      filters:
+        multiply: 1000
     apparent_return_power_l2:
       name: ${friendly_name} Apparent Power Returned L2
+      filters:
+        multiply: 1000
     apparent_return_power_l3:
       name: ${friendly_name} Apparent Power Returned L3
+      filters:
+        multiply: 1000
     active_demand_power:
       name: ${friendly_name} Active Demand Avg3
 #    active_demand_net:
@@ -279,8 +295,12 @@ sensor:
       name: ${friendly_name} Reactive Average Export Demand
     apparent_energy_import_current_average_demand:
       name: ${friendly_name} Apparent Average Recive Demand
+      filters:
+        multiply: 1000
     apparent_energy_export_current_average_demand:
       name: ${friendly_name} Apparent Average Export Demand
+      filters:
+        multiply: 1000
     active_energy_import_last_completed_demand:
       name: ${friendly_name} Active Last Recive Demand
     active_energy_export_last_completed_demand:
@@ -291,8 +311,12 @@ sensor:
       name: ${friendly_name} Reactive Last Export Demand
     apparent_energy_import_last_completed_demand:
       name: ${friendly_name} Apparent Last Recive Demand
+      filters:
+        multiply: 1000
     apparent_energy_export_last_completed_demand:
       name: ${friendly_name} Apparent Last Export Demand
+      filters:
+        multiply: 1000
     fw_core_version:
       name: ${friendly_name} Core version
     fw_module_version:
