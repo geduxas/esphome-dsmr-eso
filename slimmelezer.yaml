@@ -256,7 +256,7 @@ sensor:
 #    active_demand_net:
 #      name: ${friendly_name} Active Demand Avg3 Net
     active_demand_abs:
-      name: ${friendly_name} AActive Demand Avg3 Absolute 
+      name: ${friendly_name} Active Demand Avg3 Absolute 
     reactive_power_delivered_l1:
       name: ${friendly_name} Reactive Power Delivered L1
     reactive_power_delivered_l2:
@@ -273,6 +273,26 @@ sensor:
       name: ${friendly_name} Active Average Recive Demand
     active_energy_export_current_average_demand:
       name: ${friendly_name} Active Average Export Demand
+    reactive_energy_import_current_average_demand:
+      name: ${friendly_name} Reactive Average Recive Demand
+    reactive_energy_export_current_average_demand:
+      name: ${friendly_name} Reactive Average Export Demand
+    apparent_energy_import_current_average_demand:
+      name: ${friendly_name} Apparent Average Recive Demand
+    apparent_energy_export_current_average_demand:
+      name: ${friendly_name} Apparent Average Export Demand
+    active_energy_import_last_completed_demand:
+      name: ${friendly_name} Active Last Recive Demand
+    active_energy_export_last_completed_demand:
+      name: ${friendly_name} Active Last Export Demand
+    reactive_energy_import_last_completed_demand:
+      name: ${friendly_name} Reactive Last Recive Demand
+    reactive_energy_export_last_completed_demand:
+      name: ${friendly_name} Reactive Last Export Demand
+    apparent_energy_import_last_completed_demand:
+      name: ${friendly_name} Apparent Last Recive Demand
+    apparent_energy_export_last_completed_demand:
+      name: ${friendly_name} Apparent Last Export Demand
     fw_core_version:
       name: ${friendly_name} Core version
     fw_module_version:

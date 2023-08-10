@@ -506,6 +506,86 @@ CONFIG_SCHEMA = cv.Schema(
             state_class=STATE_CLASS_MEASUREMENT,
         ),
         cv.Optional(
+            "reactive_energy_import_current_average_demand"
+        ): sensor.sensor_schema(
+            unit_of_measurement=UNIT_KILOVOLT_AMPS_REACTIVE,
+            accuracy_decimals=3,
+            device_class=DEVICE_CLASS_POWER,
+            state_class=STATE_CLASS_MEASUREMENT,
+        ),
+        cv.Optional(
+            "reactive_energy_export_current_average_demand"
+        ): sensor.sensor_schema(
+            unit_of_measurement=UNIT_KILOVOLT_AMPS_REACTIVE,
+            accuracy_decimals=3,
+            device_class=DEVICE_CLASS_POWER,
+            state_class=STATE_CLASS_MEASUREMENT,
+        ),
+        cv.Optional(
+            "apparent_energy_import_current_average_demand"
+        ): sensor.sensor_schema(
+            unit_of_measurement=UNIT_VOLT_AMPS,
+            accuracy_decimals=3,
+            device_class=DEVICE_CLASS_POWER,
+            state_class=STATE_CLASS_MEASUREMENT,
+        ),
+        cv.Optional(
+            "apparent_energy_export_current_average_demand"
+        ): sensor.sensor_schema(
+            unit_of_measurement=UNIT_VOLT_AMPS,
+            accuracy_decimals=3,
+            device_class=DEVICE_CLASS_POWER,
+            state_class=STATE_CLASS_MEASUREMENT,
+        ),
+        cv.Optional(
+            "active_energy_import_last_completed_demand"
+        ): sensor.sensor_schema(
+            unit_of_measurement=UNIT_KILOWATT,
+            accuracy_decimals=3,
+            device_class=DEVICE_CLASS_POWER,
+            state_class=STATE_CLASS_MEASUREMENT,
+        ),
+        cv.Optional(
+            "active_energy_export_last_completed_demand"
+        ): sensor.sensor_schema(
+            unit_of_measurement=UNIT_KILOWATT,
+            accuracy_decimals=3,
+            device_class=DEVICE_CLASS_POWER,
+            state_class=STATE_CLASS_MEASUREMENT,
+        ),
+        cv.Optional(
+            "reactive_energy_import_last_completed_demand"
+        ): sensor.sensor_schema(
+            unit_of_measurement=UNIT_KILOVOLT_AMPS_REACTIVE,
+            accuracy_decimals=3,
+            device_class=DEVICE_CLASS_POWER,
+            state_class=STATE_CLASS_MEASUREMENT,
+        ),
+        cv.Optional(
+            "reactive_energy_export_last_completed_demand"
+        ): sensor.sensor_schema(
+            unit_of_measurement=UNIT_KILOVOLT_AMPS_REACTIVE,
+            accuracy_decimals=3,
+            device_class=DEVICE_CLASS_POWER,
+            state_class=STATE_CLASS_MEASUREMENT,
+        ),
+        cv.Optional(
+            "apparent_energy_import_last_completed_demand"
+        ): sensor.sensor_schema(
+            unit_of_measurement=UNIT_VOLT_AMPS,
+            accuracy_decimals=3,
+            device_class=DEVICE_CLASS_POWER,
+            state_class=STATE_CLASS_MEASUREMENT,
+        ),
+        cv.Optional(
+            "apparent_energy_export_last_completed_demand"
+        ): sensor.sensor_schema(
+            unit_of_measurement=UNIT_VOLT_AMPS,
+            accuracy_decimals=3,
+            device_class=DEVICE_CLASS_POWER,
+            state_class=STATE_CLASS_MEASUREMENT,
+        ),
+        cv.Optional(
             "active_energy_import_maximum_demand_running_month"
         ): sensor.sensor_schema(
             unit_of_measurement=UNIT_KILOWATT,
