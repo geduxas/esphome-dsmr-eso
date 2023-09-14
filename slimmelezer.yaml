@@ -275,16 +275,40 @@ sensor:
       name: ${friendly_name} Active Demand Avg3 Absolute 
     reactive_power_delivered_l1:
       name: ${friendly_name} Reactive Power Delivered L1
+      unit_of_measurement: "var"
+      accuracy_decimals: 0
+      filters:
+        multiply: 1000
     reactive_power_delivered_l2:
       name: ${friendly_name} Reactive Power Delivered L2
+      unit_of_measurement: "var"
+      accuracy_decimals: 0
+      filters:
+        multiply: 1000
     reactive_power_delivered_l3:
       name: ${friendly_name} Reactive Power Delivered L3
+      unit_of_measurement: "var"
+      accuracy_decimals: 0
+      filters:
+        multiply: 1000
     reactive_power_returned_l1:
       name: ${friendly_name} Reactive Power Returned L1
+      unit_of_measurement: "var"
+      accuracy_decimals: 0
+      filters:
+        multiply: 1000
     reactive_power_returned_l2:
       name: ${friendly_name} Reactive Power Returned L2
+      unit_of_measurement: "var"
+      accuracy_decimals: 0
+      filters:
+        multiply: 1000
     reactive_power_returned_l3:
       name: ${friendly_name} Reactive Power Returned L3
+      unit_of_measurement: "var"
+      accuracy_decimals: 0
+      filters:
+        multiply: 1000
     active_energy_import_current_average_demand:
       name: ${friendly_name} Active Average Recive Demand
     active_energy_export_current_average_demand:
@@ -307,8 +331,16 @@ sensor:
       name: ${friendly_name} Active Last Export Demand
     reactive_energy_import_last_completed_demand:
       name: ${friendly_name} Reactive Last Recive Demand
+      unit_of_measurement: "var"
+      accuracy_decimals: 0
+      filters:
+        multiply: 1000
     reactive_energy_export_last_completed_demand:
       name: ${friendly_name} Reactive Last Export Demand
+      unit_of_measurement: "var"
+      accuracy_decimals: 0
+      filters:
+        multiply: 1000
     apparent_energy_import_last_completed_demand:
       name: ${friendly_name} Apparent Last Recive Demand
       filters:
