@@ -75,7 +75,7 @@ web_server:
 uart:
   baud_rate: 115200
   rx_pin: D7
-  rx_buffer_size: 4096
+  rx_buffer_size: 3072
   debug:
     direction: RX
     after:
