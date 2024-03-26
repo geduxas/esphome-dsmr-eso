@@ -68,6 +68,7 @@ class Dsmr_eso : public Component, public uart::UARTDevice {
     DSMR_TEXT_SENSOR_LIST(DSMR_PUBLISH_TEXT_SENSOR, )
   };
 
+  void dump_telemetry();
   void dump_config() override;
 
   void set_decryption_key(const std::string &decryption_key);

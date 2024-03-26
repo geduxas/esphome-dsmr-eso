@@ -44,6 +44,7 @@ captive_portal:
 # Enable logging
 logger:
   baud_rate: 0
+  level: WARN
 
 # Enable Home Assistant API
 api:
@@ -76,12 +77,6 @@ uart:
   baud_rate: 115200
   rx_pin: D7
   rx_buffer_size: 3072
-  debug:
-    direction: RX
-    after:
-      delimiter: "\r\n"
-    sequence:
-      - lambda: UARTDebug::log_string(direction, bytes);
       
 
 globals:
@@ -115,18 +110,18 @@ sensor:
         name: ${friendly_name} Reactiver Power Delivered 1
     reactive_energy_returned_tariff1:
         name: ${friendly_name} Reactiver Power Returned 1
-    power_delivered:
-      name: ${friendly_name} Power Consumed
-      accuracy_decimals: 3
-    power_returned:
-      name: ${friendly_name} Power Returned
-      accuracy_decimals: 3
+#    power_delivered:
+#      name: ${friendly_name} Power Consumed
+#      accuracy_decimals: 3
+#    power_returned:
+#      name: ${friendly_name} Power Returned
+#      accuracy_decimals: 3
     electricity_failures:
       name: ${friendly_name} Electricity Failures
       icon: mdi:alert
-    electricity_long_failures:
-      name: ${friendly_name} Electricity Long Failures
-      icon: mdi:alert
+#    electricity_long_failures:
+#      name: ${friendly_name} Electricity Long Failures
+#      icon: mdi:alert
     voltage:
       name: ${friendly_name} Voltage
       unit_of_measurement: "V"
@@ -267,12 +262,12 @@ sensor:
       name: ${friendly_name} Apparent Power Returned L3
       filters:
         multiply: 1000
-    active_demand_power:
-      name: ${friendly_name} Active Demand Avg3
+#    active_demand_power:
+#      name: ${friendly_name} Active Demand Avg3
 #    active_demand_net:
 #      name: ${friendly_name} Active Demand Avg3 Net
-    active_demand_abs:
-      name: ${friendly_name} Active Demand Avg3 Absolute 
+#    active_demand_abs:
+#      name: ${friendly_name} Active Demand Avg3 Absolute 
     reactive_power_delivered_l1:
       name: ${friendly_name} Reactive Power Delivered L1
       unit_of_measurement: "var"
@@ -309,22 +304,22 @@ sensor:
       accuracy_decimals: 0
       filters:
         multiply: 1000
-    active_energy_import_current_average_demand:
-      name: ${friendly_name} Active Average Recive Demand
-    active_energy_export_current_average_demand:
-      name: ${friendly_name} Active Average Export Demand
-    reactive_energy_import_current_average_demand:
-      name: ${friendly_name} Reactive Average Recive Demand
-    reactive_energy_export_current_average_demand:
-      name: ${friendly_name} Reactive Average Export Demand
-    apparent_energy_import_current_average_demand:
-      name: ${friendly_name} Apparent Average Recive Demand
-      filters:
-        multiply: 1000
-    apparent_energy_export_current_average_demand:
-      name: ${friendly_name} Apparent Average Export Demand
-      filters:
-        multiply: 1000
+#    active_energy_import_current_average_demand:
+#      name: ${friendly_name} Active Average Recive Demand
+#    active_energy_export_current_average_demand:
+#      name: ${friendly_name} Active Average Export Demand
+#    reactive_energy_import_current_average_demand:
+#      name: ${friendly_name} Reactive Average Recive Demand
+#    reactive_energy_export_current_average_demand:
+#      name: ${friendly_name} Reactive Average Export Demand
+#    apparent_energy_import_current_average_demand:
+#      name: ${friendly_name} Apparent Average Recive Demand
+#      filters:
+#        multiply: 1000
+#    apparent_energy_export_current_average_demand:
+#      name: ${friendly_name} Apparent Average Export Demand
+#      filters:
+#        multiply: 1000
     active_energy_import_last_completed_demand:
       name: ${friendly_name} Active Last Recive Demand
     active_energy_export_last_completed_demand:
@@ -359,6 +354,11 @@ sensor:
     name: "SlimmeLezer Wi-Fi Signal"
     update_interval: 60s
 
+button:
+  - platform: template
+    name: "Dump telemetry"
+    on_press:
+      - lambda: id(dsmr_instance).dump_telemetry();
 
 text_sensor:
   - platform: dsmr_eso

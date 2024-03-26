@@ -271,6 +271,14 @@ bool Dsmr_eso::parse_telegram() {
   }
 }
 
+void Dsmr_eso::dump_telemetry() {
+  char * token = strtok(this->telegram_,"\r\n");
+  while(token){
+    ESP_LOGW(TAG, "%s", token);
+    token = strtok(NULL,"\r\n");
+  }
+}
+
 void Dsmr_eso::dump_config() {
   ESP_LOGCONFIG(TAG, "DSMR_eso:");
   ESP_LOGCONFIG(TAG, "  Max telegram length: %d", this->max_telegram_len_);
