@@ -171,7 +171,7 @@ sensor:
       filters:
         multiply: 1000
     current_fuse_l1:
-      name: ${friendly_name} Current L1
+      name: ${friendly_name} Current Fuse L1
       unit_of_measurement: "A"
       accuracy_decimals: 0
       filters:
@@ -183,7 +183,7 @@ sensor:
       filters:
         multiply: 1000
     current_fuse_l2:
-      name: ${friendly_name} Current L2
+      name: ${friendly_name} Current Fuse L2
       unit_of_measurement: "A"
       accuracy_decimals: 0
       filters:
@@ -195,7 +195,7 @@ sensor:
       filters: 
         multiply: 1000
     current_fuse_l3:
-      name: ${friendly_name} Current L3
+      name: ${friendly_name} Current Fuse L3
       unit_of_measurement: "A"
       accuracy_decimals: 0
       filters:
