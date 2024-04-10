@@ -232,30 +232,37 @@ sensor:
       name: ${friendly_name} Power Returned L3
     apparent_delivery_power:
       name: ${friendly_name} Apparent Power Deliverd
+      accuracy_decimals: 0
       filters:
         multiply: 1000
     apparent_delivery_power_l1:
       name: ${friendly_name} Apparent Power Deliverd L1
+      accuracy_decimals: 0
       filters:
         multiply: 1000
     apparent_delivery_power_l2:
       name: ${friendly_name} Apparent Power Deliverd L2
+      accuracy_decimals: 0
       filters:
         multiply: 1000
     apparent_delivery_power_l3:
       name: ${friendly_name} Apparent Power Deliverd L3
+      accuracy_decimals: 0
       filters:
         multiply: 1000
     apparent_return_power:
       name: ${friendly_name} Apparent Power Returned 
-      filters:
+      accuracy_decimals: 0
+      filters: 
         multiply: 1000
     apparent_return_power_l1:
       name: ${friendly_name} Apparent Power Returned L1
+      accuracy_decimals: 0
       filters:
         multiply: 1000
     apparent_return_power_l2:
       name: ${friendly_name} Apparent Power Returned L2
+      accuracy_decimals: 0
       filters:
         multiply: 1000
     apparent_return_power_l3:
