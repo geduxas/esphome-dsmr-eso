@@ -214,19 +214,19 @@ CONFIG_SCHEMA = cv.Schema(
             state_class=STATE_CLASS_MEASUREMENT,
         ),
         cv.Optional("voltage_sag_time_l1"): sensor.sensor_schema(
-            unit_of_measurement=UNIT_TIME,
+            unit_of_measurement=SECONDS,
             accuracy_decimals=0,
             device_class=DEVICE_CLASS_DURATION,
             state_class=STATE_CLASS_MEASUREMENT,
         ),
         cv.Optional("voltage_sag_time_l2"): sensor.sensor_schema(
-            unit_of_measurement=UNIT_TIME,
+            unit_of_measurement=SECONDS,
             accuracy_decimals=0,
             device_class=DEVICE_CLASS_DURATION,
             state_class=STATE_CLASS_MEASUREMENT,
         ),
         cv.Optional("voltage_sag_time_l3"): sensor.sensor_schema(
-            unit_of_measurement=UNIT_TIME,
+            unit_of_measurement=SECONDS,
             accuracy_decimals=0,
             device_class=DEVICE_CLASS_DURATION,
             state_class=STATE_CLASS_MEASUREMENT,
@@ -259,17 +259,17 @@ CONFIG_SCHEMA = cv.Schema(
             state_class=STATE_CLASS_MEASUREMENT,
         ),
         cv.Optional("voltage_swell_time_l1"): sensor.sensor_schema(
-            unit_of_measurement=UNIT_TIME,
+            unit_of_measurement=SECONDS,
             accuracy_decimals=0,
             device_class=DEVICE_CLASS_DURATION,
             state_class=STATE_CLASS_MEASUREMENT,
         ),cv.Optional("voltage_swell_time_l2"): sensor.sensor_schema(
-            unit_of_measurement=UNIT_TIME,
+            unit_of_measurement=SECONDS,
             accuracy_decimals=0,
             device_class=DEVICE_CLASS_DURATION,
             state_class=STATE_CLASS_MEASUREMENT,
         ),cv.Optional("voltage_swell_time_l3"): sensor.sensor_schema(
-            unit_of_measurement=UNIT_TIME,
+            unit_of_measurement=SECONDS,
             accuracy_decimals=0,
             device_class=DEVICE_CLASS_DURATION,
             state_class=STATE_CLASS_MEASUREMENT,
