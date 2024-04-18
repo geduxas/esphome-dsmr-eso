@@ -252,7 +252,7 @@ CONFIG_SCHEMA = cv.Schema(
             device_class=DEVICE_CLASS_VOLTAGE,
             state_class=STATE_CLASS_MEASUREMENT,
         ),
-        cv.Optional(voltage_swell_l3"): sensor.sensor_schema(
+        cv.Optional("voltage_swell_l3"): sensor.sensor_schema(
             unit_of_measurement=UNIT_VOLT,
             accuracy_decimals=0,
             device_class=DEVICE_CLASS_VOLTAGE,
