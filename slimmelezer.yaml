@@ -366,7 +366,7 @@ sensor:
       name: ${friendly_name} Voltage Sag duration L1
     voltage_sag_time_l2:
       name: ${friendly_name} Voltage Sag duration L2
-    voltage_sag_time_l2:
+    voltage_sag_time_l3:
       name: ${friendly_name} Voltage Sag duration L3
     voltage_sag_l1:
       name: ${friendly_name} Voltage Last Sag L1

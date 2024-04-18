@@ -621,6 +621,11 @@ CONFIG_SCHEMA = cv.Schema(
             accuracy_decimals=3,
         ),
         cv.Optional(
+            "min_power_factor"
+        ): sensor.sensor_schema(
+            accuracy_decimals=3,
+        ),
+        cv.Optional(
             "frequency"
         ): sensor.sensor_schema(
             unit_of_measurement=UNIT_HERTZ,
