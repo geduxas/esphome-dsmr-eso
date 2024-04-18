@@ -264,6 +264,7 @@ sensor:
         multiply: 1000
     apparent_return_power_l3:
       name: ${friendly_name} Apparent Power Returned L3
+      accuracy_decimals: 0
       filters:
         multiply: 1000
     active_demand_power:
@@ -350,18 +351,30 @@ sensor:
         multiply: 1000
     frequency:
       name: ${friendly_name} Frequency
+      filters:
+        multiply: 1000
     abs_power:
       name: ${friendly_name} Active Power
     power_factor:
       name: ${friendly_name} Power Factor
+      filters:
+        multiply: 0.001
     power_factor_l1:
       name: ${friendly_name} Power Factor L1
+      filters:
+        multiply: 0.001
     power_factor_l2:
       name: ${friendly_name} Power Factor L2
+      filters:
+        multiply: 0.001
     power_factor_l3:
       name: ${friendly_name} Power Factor L3
+      filters:
+        multiply: 0.001
     min_power_factor:
       name: ${friendly_name} Min Power Factor
+      filters:
+        multiply: 0.001
     voltage_sag_time_l1:
       name: ${friendly_name} Voltage Sag duration L1
     voltage_sag_time_l2:
@@ -420,3 +433,4 @@ text_sensor:
   - platform: version
     name: "ESPHome Version"
     hide_timestamp: true
+    

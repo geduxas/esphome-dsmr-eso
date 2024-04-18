@@ -87,9 +87,6 @@ sensor:
     electricity_failures:
       name: ${friendly_name} Electricity Failures
       icon: mdi:alert
-#    electricity_long_failures:
-#      name: ${friendly_name} Electricity Long Failures
-#      icon: mdi:alert
     voltage:
       name: ${friendly_name} Voltage
       unit_of_measurement: "V"
@@ -139,7 +136,7 @@ sensor:
       filters:
         multiply: 1000
     current_fuse_l1:
-      name: ${friendly_name} Current L1
+      name: ${friendly_name} Current Fuse L1
       unit_of_measurement: "A"
       accuracy_decimals: 0
       filters:
@@ -151,7 +148,7 @@ sensor:
       filters:
         multiply: 1000
     current_fuse_l2:
-      name: ${friendly_name} Current L2
+      name: ${friendly_name} Current Fuse L2
       unit_of_measurement: "A"
       accuracy_decimals: 0
       filters:
@@ -163,7 +160,7 @@ sensor:
       filters: 
         multiply: 1000
     current_fuse_l3:
-      name: ${friendly_name} Current L3
+      name: ${friendly_name} Current Fuse L3
       unit_of_measurement: "A"
       accuracy_decimals: 0
       filters:
@@ -200,42 +197,50 @@ sensor:
       name: ${friendly_name} Power Returned L3
     apparent_delivery_power:
       name: ${friendly_name} Apparent Power Deliverd
+      accuracy_decimals: 0
       filters:
         multiply: 1000
     apparent_delivery_power_l1:
       name: ${friendly_name} Apparent Power Deliverd L1
+      accuracy_decimals: 0
       filters:
         multiply: 1000
     apparent_delivery_power_l2:
       name: ${friendly_name} Apparent Power Deliverd L2
+      accuracy_decimals: 0
       filters:
         multiply: 1000
     apparent_delivery_power_l3:
       name: ${friendly_name} Apparent Power Deliverd L3
+      accuracy_decimals: 0
       filters:
         multiply: 1000
     apparent_return_power:
       name: ${friendly_name} Apparent Power Returned 
-      filters:
+      accuracy_decimals: 0
+      filters: 
         multiply: 1000
     apparent_return_power_l1:
       name: ${friendly_name} Apparent Power Returned L1
+      accuracy_decimals: 0
       filters:
         multiply: 1000
     apparent_return_power_l2:
       name: ${friendly_name} Apparent Power Returned L2
+      accuracy_decimals: 0
       filters:
         multiply: 1000
     apparent_return_power_l3:
       name: ${friendly_name} Apparent Power Returned L3
+      accuracy_decimals: 0
       filters:
         multiply: 1000
-#    active_demand_power:
-#      name: ${friendly_name} Active Demand Avg3
-#    active_demand_net:
-#      name: ${friendly_name} Active Demand Avg3 Net
-#    active_demand_abs:
-#      name: ${friendly_name} Active Demand Avg3 Absolute 
+    active_demand_power:
+      name: ${friendly_name} Active Demand Avg3
+    active_demand_net:
+      name: ${friendly_name} Active Demand Avg3 Net
+    active_demand_abs:
+      name: ${friendly_name} Active Demand Avg3 Absolute 
     reactive_power_delivered_l1:
       name: ${friendly_name} Reactive Power Delivered L1
       unit_of_measurement: "var"
@@ -272,22 +277,22 @@ sensor:
       accuracy_decimals: 0
       filters:
         multiply: 1000
-#    active_energy_import_current_average_demand:
-#      name: ${friendly_name} Active Average Recive Demand
-#    active_energy_export_current_average_demand:
-#      name: ${friendly_name} Active Average Export Demand
-#    reactive_energy_import_current_average_demand:
-#      name: ${friendly_name} Reactive Average Recive Demand
-#    reactive_energy_export_current_average_demand:
-#      name: ${friendly_name} Reactive Average Export Demand
-#    apparent_energy_import_current_average_demand:
-#      name: ${friendly_name} Apparent Average Recive Demand
-#      filters:
-#        multiply: 1000
-#    apparent_energy_export_current_average_demand:
-#      name: ${friendly_name} Apparent Average Export Demand
-#      filters:
-#        multiply: 1000
+    active_energy_import_current_average_demand:
+      name: ${friendly_name} Active Average Recive Demand
+    active_energy_export_current_average_demand:
+      name: ${friendly_name} Active Average Export Demand
+    reactive_energy_import_current_average_demand:
+      name: ${friendly_name} Reactive Average Recive Demand
+    reactive_energy_export_current_average_demand:
+      name: ${friendly_name} Reactive Average Export Demand
+    apparent_energy_import_current_average_demand:
+      name: ${friendly_name} Apparent Average Recive Demand
+      filters:
+        multiply: 1000
+    apparent_energy_export_current_average_demand:
+      name: ${friendly_name} Apparent Average Export Demand
+      filters:
+        multiply: 1000
     active_energy_import_last_completed_demand:
       name: ${friendly_name} Active Last Recive Demand
     active_energy_export_last_completed_demand:
@@ -312,6 +317,56 @@ sensor:
       name: ${friendly_name} Apparent Last Export Demand
       filters:
         multiply: 1000
+    frequency:
+      name: ${friendly_name} Frequency
+      filters:
+        multiply: 1000
+    abs_power:
+      name: ${friendly_name} Active Power
+    power_factor:
+      name: ${friendly_name} Power Factor
+      filters:
+        multiply: 0.001
+    power_factor_l1:
+      name: ${friendly_name} Power Factor L1
+      filters:
+        multiply: 0.001
+    power_factor_l2:
+      name: ${friendly_name} Power Factor L2
+      filters:
+        multiply: 0.001
+    power_factor_l3:
+      name: ${friendly_name} Power Factor L3
+      filters:
+        multiply: 0.001
+    min_power_factor:
+      name: ${friendly_name} Min Power Factor
+      filters:
+        multiply: 0.001
+    voltage_sag_time_l1:
+      name: ${friendly_name} Voltage Sag duration L1
+    voltage_sag_time_l2:
+      name: ${friendly_name} Voltage Sag duration L2
+    voltage_sag_time_l3:
+      name: ${friendly_name} Voltage Sag duration L3
+    voltage_sag_l1:
+      name: ${friendly_name} Voltage Last Sag L1
+    voltage_sag_l2:
+      name: ${friendly_name} Voltage Last Sag L2
+    voltage_sag_l3:
+      name: ${friendly_name} Voltage Last Sag L3
+    voltage_swell_time_l1:
+      name: ${friendly_name} Voltage Swell duration L1
+    voltage_swell_time_l2:
+      name: ${friendly_name} Voltage Swell duration L2
+    voltage_swell_time_l3:
+      name: ${friendly_name} Voltage Swell duration L3
+    voltage_swell_l1:
+      name: ${friendly_name} Voltage Last Swell L1
+    voltage_swell_l2:
+      name: ${friendly_name} Voltage Last Swell L3
+    voltage_swell_l3:
+      name: ${friendly_name} Voltage Last Swell L3
     fw_core_version:
       name: ${friendly_name} Core version
     fw_module_version:
