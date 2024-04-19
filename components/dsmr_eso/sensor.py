@@ -607,7 +607,7 @@ CONFIG_SCHEMA = cv.Schema(
         ): sensor.sensor_schema(
             unit_of_measurement=UNIT_PERCENT,
             accuracy_decimals=2,
-            device_class=DEVICE_CLASS_POWER_FACTOR
+            device_class=DEVICE_CLASS_POWER_FACTOR,
             state_class=STATE_CLASS_MEASUREMENT,
         ),
         cv.Optional(
@@ -615,7 +615,7 @@ CONFIG_SCHEMA = cv.Schema(
         ): sensor.sensor_schema(
             unit_of_measurement=UNIT_PERCENT,
             accuracy_decimals=2,
-            device_class=DEVICE_CLASS_POWER_FACTOR
+            device_class=DEVICE_CLASS_POWER_FACTOR,
             state_class=STATE_CLASS_MEASUREMENT,
         ),
         cv.Optional(
@@ -623,7 +623,7 @@ CONFIG_SCHEMA = cv.Schema(
         ): sensor.sensor_schema(
             unit_of_measurement=UNIT_PERCENT,
             accuracy_decimals=2,
-            device_class=DEVICE_CLASS_POWER_FACTOR
+            device_class=DEVICE_CLASS_POWER_FACTOR,
             state_class=STATE_CLASS_MEASUREMENT,
         ),
         cv.Optional(
@@ -631,7 +631,7 @@ CONFIG_SCHEMA = cv.Schema(
         ): sensor.sensor_schema(
             unit_of_measurement=UNIT_PERCENT,
             accuracy_decimals=2,
-            device_class=DEVICE_CLASS_POWER_FACTOR
+            device_class=DEVICE_CLASS_POWER_FACTOR,
             state_class=STATE_CLASS_MEASUREMENT,
         ),
         cv.Optional(
@@ -639,7 +639,7 @@ CONFIG_SCHEMA = cv.Schema(
         ): sensor.sensor_schema(
             unit_of_measurement=UNIT_PERCENT,
             accuracy_decimals=2,
-            device_class=DEVICE_CLASS_POWER_FACTOR
+            device_class=DEVICE_CLASS_POWER_FACTOR,
             state_class=STATE_CLASS_MEASUREMENT,
         ),
         cv.Optional(
