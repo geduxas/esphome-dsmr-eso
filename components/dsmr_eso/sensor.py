@@ -13,6 +13,7 @@ from esphome.const import (
     DEVICE_CLASS_WATER,
     DEVICE_CLASS_DURATION,
     DEVICE_CLASS_FREQUENCY,
+    DEVICE_CLASS_POWER_FACTOR,
     STATE_CLASS_MEASUREMENT,
     STATE_CLASS_TOTAL_INCREASING,
     UNIT_AMPERE,
@@ -25,6 +26,7 @@ from esphome.const import (
     UNIT_VOLT_AMPS,
     UNIT_SECOND,
     UNIT_HERTZ,
+    UNIT_PERCENT,
 )
 from . import Dsmr_eso, CONF_DSMR_ID
 
@@ -603,27 +605,42 @@ CONFIG_SCHEMA = cv.Schema(
         cv.Optional(
             "power_factor"
         ): sensor.sensor_schema(
-            accuracy_decimals=3,
+            unit_of_measurement=UNIT_PERCENT,
+            accuracy_decimals=2,
+            device_class=DEVICE_CLASS_POWER_FACTOR
+            state_class=STATE_CLASS_MEASUREMENT,
         ),
         cv.Optional(
             "power_factor_l1"
         ): sensor.sensor_schema(
-            accuracy_decimals=3,
+            unit_of_measurement=UNIT_PERCENT,
+            accuracy_decimals=2,
+            device_class=DEVICE_CLASS_POWER_FACTOR
+            state_class=STATE_CLASS_MEASUREMENT,
         ),
         cv.Optional(
             "power_factor_l2"
         ): sensor.sensor_schema(
-            accuracy_decimals=3,
+            unit_of_measurement=UNIT_PERCENT,
+            accuracy_decimals=2,
+            device_class=DEVICE_CLASS_POWER_FACTOR
+            state_class=STATE_CLASS_MEASUREMENT,
         ),
         cv.Optional(
             "power_factor_l3"
         ): sensor.sensor_schema(
-            accuracy_decimals=3,
+            unit_of_measurement=UNIT_PERCENT,
+            accuracy_decimals=2,
+            device_class=DEVICE_CLASS_POWER_FACTOR
+            state_class=STATE_CLASS_MEASUREMENT,
         ),
         cv.Optional(
             "min_power_factor"
         ): sensor.sensor_schema(
-            accuracy_decimals=3,
+            unit_of_measurement=UNIT_PERCENT,
+            accuracy_decimals=2,
+            device_class=DEVICE_CLASS_POWER_FACTOR
+            state_class=STATE_CLASS_MEASUREMENT,
         ),
         cv.Optional(
             "frequency"

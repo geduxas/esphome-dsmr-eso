@@ -287,10 +287,12 @@ sensor:
       name: ${friendly_name} Reactive Average Export Demand
     apparent_energy_import_current_average_demand:
       name: ${friendly_name} Apparent Average Recive Demand
+      accuracy_decimals: 0
       filters:
         multiply: 1000
     apparent_energy_export_current_average_demand:
       name: ${friendly_name} Apparent Average Export Demand
+      accuracy_decimals: 0
       filters:
         multiply: 1000
     active_energy_import_last_completed_demand:
@@ -311,10 +313,12 @@ sensor:
         multiply: 1000
     apparent_energy_import_last_completed_demand:
       name: ${friendly_name} Apparent Last Recive Demand
+      accuracy_decimals: 0
       filters:
         multiply: 1000
     apparent_energy_export_last_completed_demand:
       name: ${friendly_name} Apparent Last Export Demand
+      accuracy_decimals: 0
       filters:
         multiply: 1000
     frequency:
