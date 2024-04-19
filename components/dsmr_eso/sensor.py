@@ -581,12 +581,16 @@ CONFIG_SCHEMA = cv.Schema(
         ): sensor.sensor_schema(
             unit_of_measurement=UNIT_KILOVOLT_AMPS_REACTIVE,
             accuracy_decimals=3,
+            device_class=DEVICE_CLASS_REACTIVE_POWER,
+            state_class=STATE_CLASS_MEASUREMENT,
         ),
         cv.Optional(
             "reactive_energy_export_last_completed_demand"
         ): sensor.sensor_schema(
             unit_of_measurement=UNIT_KILOVOLT_AMPS_REACTIVE,
             accuracy_decimals=3,
+            device_class=DEVICE_CLASS_REACTIVE_POWER,
+            state_class=STATE_CLASS_MEASUREMENT,
         ),
         cv.Optional(
             "apparent_energy_import_last_completed_demand"
