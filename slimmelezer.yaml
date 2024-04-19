@@ -315,8 +315,16 @@ sensor:
       name: ${friendly_name} Active Average Export Demand
     reactive_energy_import_current_average_demand:
       name: ${friendly_name} Reactive Average Recive Demand
+      unit_of_measurement: "var"
+      accuracy_decimals: 0
+      filters:
+        multiply: 1000
     reactive_energy_export_current_average_demand:
       name: ${friendly_name} Reactive Average Export Demand
+      unit_of_measurement: "var"
+      accuracy_decimals: 0
+      filters:
+        multiply: 1000
     apparent_energy_import_current_average_demand:
       name: ${friendly_name} Apparent Average Recive Demand
       accuracy_decimals: 0
