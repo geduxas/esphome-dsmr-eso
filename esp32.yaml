@@ -89,100 +89,100 @@ sensor:
       icon: mdi:alert
     voltage:
       name: ${friendly_name} Voltage
-      unit_of_measurement: "V"
-      accuracy_decimals: 0
-      filters:
-        multiply: 1000
+#      unit_of_measurement: "V"
+#      accuracy_decimals: 0
+#      filters:
+#        multiply: 1000
     voltage_l1:
       name: ${friendly_name} Voltage L1
-      unit_of_measurement: "V"
-      accuracy_decimals: 0
-      filters:
-        multiply: 1000
+#      unit_of_measurement: "V"
+#      accuracy_decimals: 0
+#      filters:
+#        multiply: 1000
     voltage_avg_l1:
       name: ${friendly_name} Voltage average L1
-      unit_of_measurement: "V"
-      accuracy_decimals: 0
-      filters:
-        multiply: 1000
+#      unit_of_measurement: "V"
+#      accuracy_decimals: 0
+#      filters:
+#        multiply: 1000
     voltage_l2:
       name: ${friendly_name} Voltage L2
-      unit_of_measurement: "V"
-      accuracy_decimals: 0
-      filters:
-        multiply: 1000
+#      unit_of_measurement: "V"
+#      accuracy_decimals: 0
+#      filters:
+#        multiply: 1000
     voltage_avg_l2:
       name: ${friendly_name} Voltage average L2
-      unit_of_measurement: "V"
-      accuracy_decimals: 0
-      filters:
-        multiply: 1000
+#      unit_of_measurement: "V"
+#      accuracy_decimals: 0
+#      filters:
+#        multiply: 1000
     voltage_l3:
       name: ${friendly_name} Voltage L3
-      unit_of_measurement: "V"
-      accuracy_decimals: 0
-      filters:
-        multiply: 1000
+#      unit_of_measurement: "V"
+#      accuracy_decimals: 0
+#      filters:
+#        multiply: 1000
     voltage_avg_l3:
       name: ${friendly_name} Voltage average L3
-      unit_of_measurement: "V"
-      accuracy_decimals: 0
-      filters:
-        multiply: 1000
+#      unit_of_measurement: "V"
+#      accuracy_decimals: 0
+#      filters:
+#        multiply: 1000
     current_l1:
       name: ${friendly_name} Current L1
-      unit_of_measurement: "A"
-      accuracy_decimals: 0
-      filters:
-        multiply: 1000
+#      unit_of_measurement: "A"
+#      accuracy_decimals: 0
+#      filters:
+#        multiply: 1000
     current_fuse_l1:
       name: ${friendly_name} Current Fuse L1
-      unit_of_measurement: "A"
-      accuracy_decimals: 0
-      filters:
-        multiply: 1000
+#      unit_of_measurement: "A"
+#      accuracy_decimals: 0
+#      filters:
+#        multiply: 1000
     current_l2:
       name: ${friendly_name} Current L2
-      unit_of_measurement: "A"
-      accuracy_decimals: 0
-      filters:
-        multiply: 1000
+#      unit_of_measurement: "A"
+#      accuracy_decimals: 0
+#      filters:
+#        multiply: 1000
     current_fuse_l2:
       name: ${friendly_name} Current Fuse L2
-      unit_of_measurement: "A"
-      accuracy_decimals: 0
-      filters:
-        multiply: 1000
+#      unit_of_measurement: "A"
+#      accuracy_decimals: 0
+#      filters:
+#       multiply: 1000
     current_l3:
       name: ${friendly_name} Current L3
-      unit_of_measurement: "A"
-      accuracy_decimals: 0
-      filters: 
-        multiply: 1000
+#      unit_of_measurement: "A"
+#      accuracy_decimals: 0
+#      filters: 
+#        multiply: 1000
     current_fuse_l3:
       name: ${friendly_name} Current Fuse L3
-      unit_of_measurement: "A"
-      accuracy_decimals: 0
-      filters:
-        multiply: 1000
+#      unit_of_measurement: "A"
+#      accuracy_decimals: 0
+#      filters:
+#        multiply: 1000
     current:
       name: ${friendly_name} Current
-      unit_of_measurement: "A"
-      accuracy_decimals: 0
-      filters:
-        multiply: 1000
+#      unit_of_measurement: "A"
+#      accuracy_decimals: 0
+#      filters:
+#        multiply: 1000
     current_n:
       name: ${friendly_name} Current N
-      unit_of_measurement: "A"
-      accuracy_decimals: 0
-      filters:
-        multiply: 1000
+#      unit_of_measurement: "A"
+#      accuracy_decimals: 0
+#      filters:
+#        multiply: 1000
     current_sum:
       name: ${friendly_name} Current sum
-      unit_of_measurement: "A"
-      accuracy_decimals: 0
-      filters:
-        multiply: 1000
+#      unit_of_measurement: "A"
+#      accuracy_decimals: 0
+#      filters:
+#        multiply: 1000
     power_delivered_l1:
       name: ${friendly_name} Power Delivered L1
     power_delivered_l2:
