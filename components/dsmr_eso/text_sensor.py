@@ -24,6 +24,9 @@ CONFIG_SCHEMA = cv.Schema(
         cv.Optional("gas_delivered_text"): text_sensor.text_sensor_schema(),
         cv.Optional("fw_core_checksum"): text_sensor.text_sensor_schema(),
         cv.Optional("fw_module_checksum"): text_sensor.text_sensor_schema(),
+        cv.Optional("equipment_id"): text_sensor.text_sensor_schema(),
+        cv.Optional("consumer_msg"): text_sensor.text_sensor_schema(),
+
 
     }
 ).extend(cv.COMPONENT_SCHEMA)
