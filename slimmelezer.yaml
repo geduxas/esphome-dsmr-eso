@@ -368,23 +368,23 @@ sensor:
     power_factor:
       name: ${friendly_name} Power Factor
       filters:
-        multiply: 1000
+        multiply: 100
     power_factor_l1:
       name: ${friendly_name} Power Factor L1
       filters:
-        multiply: 1000
+        multiply: 100
     power_factor_l2:
       name: ${friendly_name} Power Factor L2
       filters:
-        multiply: 1000
+        multiply: 100
     power_factor_l3:
       name: ${friendly_name} Power Factor L3
       filters:
-        multiply: 1000
+        multiply: 100
     min_power_factor:
       name: ${friendly_name} Min Power Factor
       filters:
-        multiply: 1000
+        multiply: 100
     voltage_sag_time_l1:
       name: ${friendly_name} Voltage Sag duration L1
     voltage_sag_time_l2:
