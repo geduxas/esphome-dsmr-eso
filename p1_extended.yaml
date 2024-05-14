@@ -1,12 +1,7 @@
 packages:
   # Git repo examples
-  remote_package:
-    url: https://github.com/geduxas/esphome-dsmr-eso
-    ref: main
-    files: [p1_standard.yaml]
-    refresh: 0s 
-  
-
+  geduxas.esodsmr: github://geduxas/esphome-dsmr-eso/p1_standard.yaml@main
+ 
 sensor:
   total_imported_energy:
     name: ${friendly_name} Reactive Energy Delivered 

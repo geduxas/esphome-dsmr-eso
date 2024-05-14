@@ -1,12 +1,7 @@
 packages:
   # Git repo examples
-  remote_package:
-    url: https://github.com/geduxas/esphome-dsmr-eso
-    ref: main
-    files: [p1_extended.yaml]
-    refresh: 0s 
-  
-
+  geduxas.esodsmr: github://geduxas/esphome-dsmr-eso/p1_extended.yaml@main
+ 
 sensor:
   energy_returned_tariff1:
     name: ${friendly_name} Energy Returned Tariff 1
@@ -48,7 +43,7 @@ sensor:
     name: ${friendly_name} Current sum
   abs_power:
     name: ${friendly_name} Active Power
-    apparent_delivery_power:
+  apparent_delivery_power:
     name: ${friendly_name} Apparent Power Deliverd
     accuracy_decimals: 0
     filters:
@@ -158,3 +153,6 @@ text_sensor:
       name: ${friendly_name} Core checskum
     fw_module_checksum:
       name: ${friendly_name} Module checskum
+
+
+ 
