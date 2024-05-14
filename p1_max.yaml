@@ -1,6 +1,6 @@
-packages:
-  # Git repo examples
-  geduxas.p1_extended: github://geduxas/esphome-dsmr-eso/p1_extended.yaml@main
+#packages:
+#  # Git repo examples
+#  geduxas.p1_extended: github://geduxas/esphome-dsmr-eso/p1_extended.yaml@main
  
 sensor:
   energy_returned_tariff1:
