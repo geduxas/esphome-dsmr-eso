@@ -47,7 +47,7 @@ sensor:
   reactive_power_returned_l3:
     name: ${friendly_name} Reactive Power Returned L3
     unit_of_measurement: "var"
-  accuracy_decimals: 0
+    accuracy_decimals: 0
     filters:
       multiply: 1000
   frequency:
