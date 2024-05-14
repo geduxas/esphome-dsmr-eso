@@ -1,6 +1,6 @@
-packages:
+#packages:
   # Git repo examples
-  geduxas.p1_standard: !include p1_standard.yaml
+#  geduxas.p1_standard: !include p1_standard.yaml
 #  geduxas.p1_standard: github://geduxas/esphome-dsmr-eso/p1_standard.yaml@main
  
 sensor:
