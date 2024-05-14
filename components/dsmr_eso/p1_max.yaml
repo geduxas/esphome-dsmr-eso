@@ -1,0 +1,160 @@
+packages:
+  # Git repo examples
+  remote_package:
+    url: https://github.com/geduxas/esphome-dsmr-eso
+    ref: main
+    files: [p1_extended.yaml]
+    refresh: 0s 
+  
+
+sensor:
+  energy_returned_tariff1:
+    name: ${friendly_name} Energy Returned Tariff 1
+  energy_returned_tariff2:
+    name: ${friendly_name} Energy Returned Tariff 2
+  energy_returned_tariff3:
+    name: ${friendly_name} Energy Returned Tariff 3
+  energy_returned_tariff4:
+    name: ${friendly_name} Energy Returned Tariff 4
+  reactive_energy_delivered_tariff1:
+    name: ${friendly_name} Reactiver Power Delivered 1
+  reactive_energy_delivered_tariff2:
+    name: ${friendly_name} Reactiver Power Delivered 2
+  reactive_energy_delivered_tariff3:
+    name: ${friendly_name} Reactiver Power Delivered 3
+  reactive_energy_delivered_tariff4:
+    name: ${friendly_name} Reactiver Power Delivered 4
+  reactive_energy_returned_tariff1:
+    name: ${friendly_name} Reactiver Power Returned 1
+  reactive_energy_returned_tariff2:
+    name: ${friendly_name} Reactiver Power Returned 2
+  reactive_energy_returned_tariff3:
+    name: ${friendly_name} Reactiver Power Returned 3
+  reactive_energy_returned_tariff4:
+    name: ${friendly_name} Reactiver Power Returned 4
+  voltage_avg_l1:
+    name: ${friendly_name} Voltage average L1
+  voltage_avg_l2:
+    name: ${friendly_name} Voltage average L2
+  voltage_avg_l3:
+    name: ${friendly_name} Voltage average L3
+  voltage:
+    name: ${friendly_name} Voltage average L1
+  current:
+    name: ${friendly_name} Current
+  current_n:
+    name: ${friendly_name} Current N
+  current_sum:
+    name: ${friendly_name} Current sum
+  abs_power:
+    name: ${friendly_name} Active Power
+    apparent_delivery_power:
+    name: ${friendly_name} Apparent Power Deliverd
+    accuracy_decimals: 0
+    filters:
+      multiply: 1000
+  apparent_delivery_power_l1:
+      name: ${friendly_name} Apparent Power Deliverd L1
+      accuracy_decimals: 0
+      filters:
+        multiply: 1000
+  apparent_delivery_power_l2:
+      name: ${friendly_name} Apparent Power Deliverd L2
+      accuracy_decimals: 0
+      filters:
+        multiply: 1000
+  apparent_delivery_power_l3:
+      name: ${friendly_name} Apparent Power Deliverd L3
+      accuracy_decimals: 0
+      filters:
+        multiply: 1000
+  apparent_return_power:
+      name: ${friendly_name} Apparent Power Returned 
+      accuracy_decimals: 0
+      filters: 
+        multiply: 1000
+  apparent_return_power_l1:
+      name: ${friendly_name} Apparent Power Returned L1
+      accuracy_decimals: 0
+      filters:
+        multiply: 1000
+  apparent_return_power_l2:
+      name: ${friendly_name} Apparent Power Returned L2
+      accuracy_decimals: 0
+      filters:
+        multiply: 1000
+  apparent_return_power_l3:
+      name: ${friendly_name} Apparent Power Returned L3
+      accuracy_decimals: 0
+      filters:
+        multiply: 1000
+  active_demand_power:
+    name: ${friendly_name} Active Demand Avg3
+  active_demand_net:
+    name: ${friendly_name} Active Demand Avg3 Net
+  active_demand_abs:
+    name: ${friendly_name} Active Demand Avg3 Absolute 
+  min_power_factor:
+    name: ${friendly_name} Min Power Factor
+    filters:
+       multiply: 100
+  active_energy_import_current_average_demand:
+    name: ${friendly_name} Active Average Recive Demand
+  active_energy_export_current_average_demand:
+    name: ${friendly_name} Active Average Export Demand
+  reactive_energy_import_current_average_demand:
+    name: ${friendly_name} Reactive Average Recive Demand
+    unit_of_measurement: "var"
+    accuracy_decimals: 0
+    filters:
+      multiply: 1000
+  reactive_energy_export_current_average_demand:
+    name: ${friendly_name} Reactive Average Export Demand
+    unit_of_measurement: "var"
+    accuracy_decimals: 0
+    filters:
+      multiply: 1000
+  apparent_energy_import_current_average_demand:
+    name: ${friendly_name} Apparent Average Recive Demand
+    accuracy_decimals: 0
+    filters:
+      multiply: 1000
+  apparent_energy_export_current_average_demand:
+    name: ${friendly_name} Apparent Average Export Demand
+    accuracy_decimals: 0
+    filters:
+      multiply: 1000
+  voltage_sag_time_l1:
+    name: ${friendly_name} Voltage Sag duration L1
+  voltage_sag_time_l2:
+    name: ${friendly_name} Voltage Sag duration L2
+  voltage_sag_time_l3:
+    name: ${friendly_name} Voltage Sag duration L3
+  voltage_sag_l1:
+    name: ${friendly_name} Voltage Last Sag L1
+  voltage_sag_l2:
+    name: ${friendly_name} Voltage Last Sag L2
+  voltage_sag_l3:
+    name: ${friendly_name} Voltage Last Sag L3
+  voltage_swell_time_l1:
+    name: ${friendly_name} Voltage Swell duration L1
+  voltage_swell_time_l2:
+    name: ${friendly_name} Voltage Swell duration L2
+  voltage_swell_time_l3:
+    name: ${friendly_name} Voltage Swell duration L3
+  voltage_swell_l1:
+    name: ${friendly_name} Voltage Last Swell L1
+  voltage_swell_l2:
+    name: ${friendly_name} Voltage Last Swell L2
+  voltage_swell_l3:
+    name: ${friendly_name} Voltage Last Swell L3
+  fw_core_version:
+    name: ${friendly_name} Core version
+  fw_module_version:
+    name: ${friendly_name} Module version
+    
+text_sensor:
+    fw_core_checksum:
+      name: ${friendly_name} Core checskum
+    fw_module_checksum:
+      name: ${friendly_name} Module checskum
