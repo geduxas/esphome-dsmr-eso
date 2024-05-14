@@ -96,7 +96,6 @@ dsmr_eso:
 
 sensor:
   - platform: dsmr_eso
-    timestamp:
     energy_delivered_lux:
       name: ${friendly_name} Energy Delivered total
     energy_delivered_tariff1:
