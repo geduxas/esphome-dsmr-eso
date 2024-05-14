@@ -1,6 +1,6 @@
 packages:
   # Git repo examples
-  geduxas.esodsmr: github://geduxas/esphome-dsmr-eso/p1_standard.yaml@main
+  geduxas.p1_standard: github://geduxas/esphome-dsmr-eso/p1_standard.yaml@main
  
 sensor:
   total_imported_energy:
