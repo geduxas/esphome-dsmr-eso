@@ -269,6 +269,11 @@ text_sensor:
       name: ${friendly_name} Equipment identifier
     consumer_msg:
       name: ${friendly_name} Consumer Message Text
+    fw_core_checksum:
+      name: ${friendly_name} Core checskum
+    fw_module_checksum:
+      name: ${friendly_name} Module checskum
+
   - platform: wifi_info
     ip_address:
       name: "SlimmeLezer IP Address"
@@ -280,10 +285,6 @@ text_sensor:
     name: "ESPHome Version"
     hide_timestamp: true
 
-    fw_core_checksum:
-      name: ${friendly_name} Core checskum
-    fw_module_checksum:
-      name: ${friendly_name} Module checskum
 
 
  
