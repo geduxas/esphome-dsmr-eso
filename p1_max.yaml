@@ -1,6 +1,4 @@
 packages:
-  # Git repo examples
-  # geduxas.base: !include p1_standard.yaml
   geduxas.base: github://geduxas/esphome-dsmr-eso/esp8266.yaml@main
  
 sensor:
