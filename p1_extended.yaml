@@ -51,75 +51,75 @@ sensor:
     electricity_swells_l3:
       name: ${friendly_name} Number of voltage swells L3
 
-  total_imported_energy:
-    name: ${friendly_name} Reactive Energy Delivered 
-  total_exported_energy:
-    name: ${friendly_name} Reactive Energy Returned 
-  power_returned_l1:
-    name: ${friendly_name} Power Returned L2
-  power_returned_l2:
-    name: ${friendly_name} Power Returned L3
-  power_returned_l3:
-    name: ${friendly_name} Power Returned L4
-  reactive_power_delivered_l1:
-    name: ${friendly_name} Reactive Power Delivered L1
-    unit_of_measurement: "var"
-    accuracy_decimals: 0
-    filters:
-      multiply: 1000  
-  reactive_power_delivered_l2:
-    name: ${friendly_name} Reactive Power Delivered L2
-    unit_of_measurement: "var"
-    accuracy_decimals: 0
-    filters:
-      multiply: 1000
-  reactive_power_delivered_l3:
-    name: ${friendly_name} Reactive Power Delivered L3
-    unit_of_measurement: "var"
-    accuracy_decimals: 0
-    filters:
-      multiply: 1000
-  reactive_power_returned_l1:
-    name: ${friendly_name} Reactive Power Returned L1
-    unit_of_measurement: "var"
-    accuracy_decimals: 0
-    filters:
-      multiply: 1000
-  reactive_power_returned_l2:
-    name: ${friendly_name} Reactive Power Returned L2
-    unit_of_measurement: "var"
-    accuracy_decimals: 0
-    filters:
-      multiply: 1000
-  reactive_power_returned_l3:
-    name: ${friendly_name} Reactive Power Returned L3
-    unit_of_measurement: "var"
-    accuracy_decimals: 0
-    filters:
-      multiply: 1000
-  frequency:
-    name: ${friendly_name} Frequency
-  power_factor:
-    name: ${friendly_name} Power Factor
-    filters:
-      multiply: 100
-  power_factor_l1:
-    name: ${friendly_name} Power Factor L1
-    filters:
-      multiply: 100
-  power_factor_l2:
-    name: ${friendly_name} Power Factor L2
-    filters:
-      multiply: 100
-  power_factor_l3:
-    name: ${friendly_name} Power Factor L3
-    filters:
-      multiply: 100
+    total_imported_energy:
+      name: ${friendly_name} Reactive Energy Delivered 
+    total_exported_energy:
+      name: ${friendly_name} Reactive Energy Returned 
+    power_returned_l1:
+      name: ${friendly_name} Power Returned L2
+    power_returned_l2:
+      name: ${friendly_name} Power Returned L3
+    power_returned_l3:
+      name: ${friendly_name} Power Returned L4
+    reactive_power_delivered_l1:
+      name: ${friendly_name} Reactive Power Delivered L1
+      unit_of_measurement: "var"
+      accuracy_decimals: 0
+      filters:
+        multiply: 1000  
+    reactive_power_delivered_l2:
+      name: ${friendly_name} Reactive Power Delivered L2
+      unit_of_measurement: "var"
+      accuracy_decimals: 0
+      filters:
+        multiply: 1000
+    reactive_power_delivered_l3:
+      name: ${friendly_name} Reactive Power Delivered L3
+      unit_of_measurement: "var"
+      accuracy_decimals: 0
+      filters:
+        multiply: 1000
+    reactive_power_returned_l1:
+      name: ${friendly_name} Reactive Power Returned L1
+      unit_of_measurement: "var"
+      accuracy_decimals: 0
+      filters:
+        multiply: 1000
+    reactive_power_returned_l2:
+      name: ${friendly_name} Reactive Power Returned L2
+      unit_of_measurement: "var"
+      accuracy_decimals: 0
+      filters:
+        multiply: 1000
+    reactive_power_returned_l3:
+      name: ${friendly_name} Reactive Power Returned L3
+      unit_of_measurement: "var"
+      accuracy_decimals: 0
+      filters:
+        multiply: 1000
+    frequency:
+      name: ${friendly_name} Frequency
+    power_factor:
+      name: ${friendly_name} Power Factor
+      filters:
+        multiply: 100
+    power_factor_l1:
+      name: ${friendly_name} Power Factor L1
+      filters:
+        multiply: 100
+    power_factor_l2:
+      name: ${friendly_name} Power Factor L2
+      filters:
+        multiply: 100
+    power_factor_l3:
+      name: ${friendly_name} Power Factor L3
+      filters:
+        multiply: 100
 
-  power_returned:
-    name: ${friendly_name} "Power returned"
-    accuracy_decimals: 3
-  reactive_power_delivered:
-    name: ${friendly_name} "Reactive Power Delivered"
-  reactive_power_returned:
-    name: ${friendly_name} "Reactive Power Returned"
+    power_returned:
+      name: ${friendly_name} "Power returned"
+      accuracy_decimals: 3
+    reactive_power_delivered:
+      name: ${friendly_name} "Reactive Power Delivered"
+    reactive_power_returned:
+      name: ${friendly_name} "Reactive Power Returned"
