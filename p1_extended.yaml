@@ -54,11 +54,11 @@ sensor:
     total_exported_energy:
       name: ${friendly_name} Reactive Energy Returned 
     power_returned_l1:
-      name: ${friendly_name} Power Returned L2
+      name: ${friendly_name} Power Returned L1
     power_returned_l2:
-      name: ${friendly_name} Power Returned L3
+      name: ${friendly_name} Power Returned L2
     power_returned_l3:
-      name: ${friendly_name} Power Returned L4
+      name: ${friendly_name} Power Returned L3
     reactive_power_delivered_l1:
       name: ${friendly_name} Reactive Power Delivered L1
       unit_of_measurement: "var"
