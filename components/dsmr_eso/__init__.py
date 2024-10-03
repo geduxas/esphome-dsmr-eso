@@ -89,6 +89,7 @@ async def to_code(config):
     # DSMR Parser
     #cg.add_library("geduxas/Dsmr", "0.8.0")
     #cg.add_library("https://github.com/geduxas/arduino-dsmr.git","0.8.0")
-    cg.add_library(name="Dsmr", repository="https://github.com/geduxas/esphome-dsmr-eso", version="0b13bf2ee5ff4c6dc2658f3e0b9ae601bb215cf8")
+    cg.add_library("https://github.com/geduxas/arduino-dsmr/archive/refs/heads/bertmelis_Fork.zip","0.9.0")
+    #cg.add_library(name="Dsmr", repository="https://github.com/geduxas/arduino-dsmr.git", version="4340c4ec630a9555c40be643f0502087a601cec6")
     # Crypto
     cg.add_library("rweather/Crypto", "0.4.0")
