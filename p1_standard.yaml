@@ -1,0 +1,70 @@
+packages:
+  geduxas.base: github://geduxas/esphome-dsmr-eso/esp8266.yaml@main
+  
+
+sensor:
+  - platform: dsmr_eso
+    energy_delivered_lux:
+      name: ${friendly_name} Energy Delivered total
+    energy_delivered_tariff1:
+      name: ${friendly_name} Energy Delivered Tariff 1
+    energy_delivered_tariff2:
+      name: ${friendly_name} Energy Delivered Tariff 2
+    energy_delivered_tariff3:
+      name: ${friendly_name} Energy Delivered Tariff 3
+    energy_delivered_tariff4:
+      name: ${friendly_name} Energy Delivered Tariff 4
+    energy_returned_lux:
+      name: ${friendly_name} Energy Returned total
+    power_delivered_l1:
+      name: ${friendly_name} Power Delivered L1
+    power_delivered_l2:
+      name: ${friendly_name} Power Delivered L2
+    power_delivered_l3:
+      name: ${friendly_name} Power Delivered L3
+    voltage_l1:
+      name: ${friendly_name} Voltage L1
+    voltage_l2:
+      name: ${friendly_name} Voltage L2
+    voltage_l3:
+      name: ${friendly_name} Voltage L3
+    current_l1:
+      name: ${friendly_name} Current L1
+    current_l2:
+      name: ${friendly_name} Current L2
+    current_l3:
+      name: ${friendly_name} Current L3
+    electricity_failures:
+      name: ${friendly_name} Electricity Failures
+      icon: mdi:alert
+    electricity_sags_l1:
+      name: ${friendly_name} Number of voltage sags L1
+    electricity_sags_l2:
+      name: ${friendly_name} Number of voltage sags L2
+    electricity_sags_l3:
+      name: ${friendly_name} Number of voltage sags L3
+    electricity_swells_l1:
+      name: ${friendly_name} Number of voltage swells L1
+    electricity_swells_l2:
+      name: ${friendly_name} Number of voltage swells L2
+    electricity_swells_l3:
+      name: ${friendly_name} Number of voltage swells L3
+    
+text_sensor:
+  - platform: dsmr_eso
+    identification:
+      name: "DSMR Identification"
+    equipment_id:
+      name: ${friendly_name} Equipment identifier
+    consumer_msg:
+      name: ${friendly_name} Consumer Message Text
+  - platform: wifi_info
+    ip_address:
+      name: "SlimmeLezer IP Address"
+    ssid:
+      name: "SlimmeLezer Wi-Fi SSID"
+    bssid:
+      name: "SlimmeLezer Wi-Fi BSSID"
+  - platform: version
+    name: "ESPHome Version"
+    hide_timestamp: true

@@ -11,7 +11,7 @@ Naujam projektui reikia nurodyt
 substitutions:
   device_name: slimmelezer
 packages:
-  geduxas.esodsmr: github://geduxas/esphome-dsmr-eso/slimmelezer.yaml@main
+  esodsmr: github://geduxas/esphome-dsmr-eso/p1_standard.yaml@main # p1_standard.yaml; p1_extended.yaml; p1_max.yaml
 esphome:
   name: ${device_name}
   name_add_mac_suffix: false
