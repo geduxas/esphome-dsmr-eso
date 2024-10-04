@@ -3,7 +3,7 @@ substitutions:
   friendly_name: DSMR Reader
 
 external_components:
-  - source: github://geduxas/esphome-dsmr-eso@main
+  - source: github://geduxas/esphome-dsmr-eso@testBuild
     refresh: 0s
 
 esphome:

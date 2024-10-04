@@ -64,7 +64,7 @@ class Dsmr_eso : public Component, public uart::UARTDevice {
 
 #define DSMR_PUBLISH_TEXT_SENSOR(s) \
   if (data.s##_present && this->s_##s##_ != nullptr) \
-    s_##s##_->publish_state(data.s.c_str());
+    s_##s##_->publish_state(data.s);
     DSMR_TEXT_SENSOR_LIST(DSMR_PUBLISH_TEXT_SENSOR, )
   };
 

@@ -1,5 +1,5 @@
 packages:
-  geduxas.base: github://geduxas/esphome-dsmr-eso/esp8266.yaml@main
+  geduxas.base: github://geduxas/esphome-dsmr-eso/esp8266.yaml@testBuild
  
 sensor:
   - platform: dsmr_eso
@@ -54,11 +54,11 @@ sensor:
     total_exported_energy:
       name: ${friendly_name} Reactive Energy Returned 
     power_returned_l1:
-      name: ${friendly_name} Power Returned L2
+      name: ${friendly_name} Power Returned L1
     power_returned_l2:
-      name: ${friendly_name} Power Returned L3
+      name: ${friendly_name} Power Returned L2
     power_returned_l3:
-      name: ${friendly_name} Power Returned L4
+      name: ${friendly_name} Power Returned L3
     reactive_power_delivered_l1:
       name: ${friendly_name} Reactive Power Delivered L1
       unit_of_measurement: "var"
@@ -145,7 +145,7 @@ sensor:
     voltage_avg_l3:
       name: ${friendly_name} Voltage average L3
     voltage:
-      name: ${friendly_name} Voltage average L1
+      name: ${friendly_name} Voltage average
     current:
       name: ${friendly_name} Current
     current_n:
@@ -282,7 +282,3 @@ text_sensor:
   - platform: version
     name: "ESPHome Version"
     hide_timestamp: true
-
-
-
- 

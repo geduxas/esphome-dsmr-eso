@@ -262,7 +262,7 @@ bool Dsmr_eso::parse_telegram() {
   if (res.err) {
     // Parsing error, show it
     auto err_str = res.fullError(this->telegram_, this->telegram_ + this->bytes_read_);
-    ESP_LOGE(TAG, "%s", err_str.c_str());
+    ESP_LOGE(TAG, "%s", err_str);
     return false;
   } else {
     this->status_clear_warning();
